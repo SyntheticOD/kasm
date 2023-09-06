@@ -1,0 +1,33 @@
+FROM kasmweb/core-kali-rolling:1.12.0-rolling
+USER root
+
+ENV HOME /home/kasm-default-profile
+ENV STARTUPDIR /dockerstartup
+ENV INST_SCRIPTS $STARTUPDIR/install
+
+# TTI Install packages
+RUN apt update
+RUN apt install -y zaproxy vim-gtk3 terminator fish
+
+# TTI Copy custom yaml
+COPY ./kasmvnc.yaml /etc/kasmvnc/kasmvnc.yaml
+COPY ./tti_banner.png /usr/share/backgrounds/kali-16x9/default
+WORKDIR $HOME
+
+######### Customize Container Here ###########
+# TTI final touches
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN $HOME/.cargo/bin/cargo install feroxbuster
+RUN $HOME/.cargo/bin/cargo install rustscan
+RUN ln -s $HOME/.cargo/bin/rustscan /usr/local/bin/rustscan
+
+######### End Customizations ###########
+
+RUN chown 1000:0 $HOME
+RUN $STARTUPDIR/set_user_permission.sh $HOME
+
+ENV HOME /home/kasm-user
+WORKDIR $HOME
+RUN mkdir -p $HOME && chown -R 1000:0 $HOME
+
+USER 1000
