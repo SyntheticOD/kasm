@@ -1,0 +1,80 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red187\green87\blue208;\red203\green207\blue219;\red181\green84\blue201;
+\red85\green123\blue216;\red219\green221\blue228;\red42\green165\blue93;}
+{\*\expandedcolortbl;;\cssrgb\c78824\c45098\c85098;\cssrgb\c83529\c84706\c88627\c81961;\cssrgb\c76863\c43529\c82745;
+\cssrgb\c40392\c56863\c87843;\cssrgb\c88627\c89412\c91373\c56078;\cssrgb\c18431\c69412\c43922;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ---\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \strokec5 services\cf6 \strokec6 :\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3   \cf5 \strokec5 emulatorjs\cf6 \strokec6 :\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3     \cf5 \strokec5 image\cf6 \strokec6 :\cf3 \strokec3  \cf7 \strokec7 lscr.io/linuxserver/emulatorjs:latest\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3     \cf5 \strokec5 container_name\cf6 \strokec6 :\cf3 \strokec3  \cf7 \strokec7 emulatorjs\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3     \cf5 \strokec5 environment\cf6 \strokec6 :\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 PUID=1000\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 PGID=1000\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 TZ=Etc/UTC\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 SUBFOLDER=/\cf3 \strokec3  \cf6 \strokec6 #optional\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3     \cf5 \strokec5 volumes\cf6 \strokec6 :\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 /path/to/config:/config\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 /path/to/data:/data\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3     \cf5 \strokec5 ports\cf6 \strokec6 :\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 3000:3000\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 80:80\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3       \cf6 \strokec6 -\cf3 \strokec3  \cf7 \strokec7 4001:4001\cf3 \strokec3  \cf6 \strokec6 #optional\cf3 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3     \cf5 \strokec5 restart\cf6 \strokec6 :\cf3 \strokec3  \cf7 \strokec7 unless-stopped}
